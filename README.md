@@ -10,7 +10,7 @@ Proyek ini berfokus pada analisis data menggunakan berbagai dataset terkait tran
 projek-data-analys/
 ├── dashboard/
 │   ├── __pycache__/
-│   ├── all_df.csv
+│   ├── alldata_df.csv
 │   ├── dashboard.py
 |   ├── Elshopping.png
 ├── dataset/
