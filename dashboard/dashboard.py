@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 sns.set(style='dark')
 
-# Membuat fungsi produk paling banyak dibeli
+# Membuat fungsi produk paling banyak dibelii
 def get_top_categories(df, n=10):
     category_counts = df['product_category_name'].value_counts().reset_index()
     category_counts.columns = ['product_category_name', 'total_orders']
