@@ -51,7 +51,7 @@ def calculate_rfm(df):
 st.header('El-shopping E-Commerce Dashboard :goat:')
 
 # Meload dataset
-all_df = pd.read_csv("all_df.csv")
+all_df = pd.read_csv("alldata_df.csv")
 
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date",
                 "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date_y"]
