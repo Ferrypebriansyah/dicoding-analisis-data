@@ -1,15 +1,14 @@
-# Proyek Analisis Data
+# Project Analisis Data
 
-## 📌 Deskripsi Proyek
+## 📌 Deskripsi Project
 
 Proyek ini berfokus pada analisis data menggunakan berbagai dataset terkait transaksi, pelanggan, lokasi, dan produk. Data dianalisis untuk mendapatkan wawasan yang berguna dalam pengambilan keputusan bisnis.
 
 ## 📁 Struktur Folder
 
 ```
-projek-data-analys/
+project_analisis_ferry/
 ├── dashboard/
-│   ├── __pycache__/
 │   ├── alldata_df.csv
 │   ├── dashboard.py
 |   ├── Elshopping.png
@@ -24,7 +23,7 @@ projek-data-analys/
 │   ├── products_dataset.csv
 │   ├── sales_df.csv
 │   ├── sellers_dataset.csv
-├── CC_FerryPebriansyah_project.ipynb
+├── CC_FerryPebriansyah_Project.ipynb
 ├── README.md
 ├── requirements.txt
 └── url.txt
@@ -51,9 +50,9 @@ projek-data-analys/
 
 ## 📊 Dataset
 
-| File         | Deskripsi                       |
-| ------------ | ------------------------------- |
-| `all_df.csv` | Data gabungan dari semua sumber |
+| File             | Deskripsi                       |
+| ---------------- | ------------------------------- |
+| `alldata_df.csv` | Data gabungan dari semua sumber |
 
 ## ⚠️ Catatan Penting
 
