@@ -1,3 +1,3 @@
-https://deploy-elshopping.streamlit.app/
+https://elshopping-ecommerce.streamlit.app/
 
 catatan = Pada dashboard, untuk visualisasi RFM memang loadnya membutuhkan waktu sedikit lebih lama dibandingkan dengan visualisasi yang lainnya.
