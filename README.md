@@ -9,7 +9,7 @@ Proyek ini berfokus pada analisis data menggunakan berbagai dataset terkait tran
 ```
 project_analisis_ferry/
 ├── dashboard/
-│   ├── alldata_df.csv
+│   ├── all_df.csv
 │   ├── dashboard.py
 |   ├── Elshopping.png
 ├── dataset/
@@ -23,7 +23,7 @@ project_analisis_ferry/
 │   ├── products_dataset.csv
 │   ├── sales_df.csv
 │   ├── sellers_dataset.csv
-├── CC_FerryPebriansyah_Project.ipynb
+├── FerryPebriansyah_ProjectAnalisys.ipynb
 ├── README.md
 ├── requirements.txt
 └── url.txt
@@ -50,18 +50,12 @@ project_analisis_ferry/
 
 ## 📊 Dataset
 
-| File             | Deskripsi                       |
-| ---------------- | ------------------------------- |
-| `alldata_df.csv` | Data gabungan dari semua sumber |
+| File         | Deskripsi                       |
+| ------------ | ------------------------------- |
+| `all_df.csv` | Data gabungan dari semua sumber |
 
 ## ⚠️ Catatan Penting
 
-- Jikan ingi menjalankan di Google Collab atau semacamnya. Ubah nama folder 'data_sample' menjadi 'dataset'. Kemudian upload file pada folder dataset keadalam fokder tersebut
-
-## 📧 Kontak
-
-Jika ada pertanyaan, hubungi: **ferryfeb10@gmail.com**
-
----
+- Jika ingin menjalankan di Google Collab atau semacamnya. Ubah nama folder 'data_sample' menjadi 'dataset'. Kemudian upload file pada folder dataset keadalam fokder tersebut.
 
 © 2025 - Proyek Analisis Data - Ferry Pebriansyah

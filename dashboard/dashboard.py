@@ -51,7 +51,7 @@ def calculate_rfm(df):
 st.header('El-shopping E-Commerce Dashboard :goat:')
 
 # Meload dataset
-all_df = pd.read_csv("alldata_df.csv")
+all_df = pd.read_csv("all_df.csv")
 
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date",
                 "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date_y"]
@@ -68,14 +68,7 @@ max_date = all_df["order_approved_at"].max()
 with st.sidebar:
     # Logo
     st.image("Elshopping.png")
-    # Range date
-    start_date, end_date = st.date_input(
-        label='Time Period',
-        min_value=min_date,
-        max_value=max_date,
-        value=[min_date, max_date]
-    )
-
+    st.header("E-Commerce Dashboard")
 
 # Top Most and Bottom Least Purchased Categories Visualization 
 st.subheader("Top Most and Bottom Least Purchased Categories")
@@ -111,6 +104,10 @@ with col1:
     ax.set_ylabel("Product Category", fontsize=10)
     wrap_labels(ax, width=15)
     st.pyplot(fig)
+    with st.expander("See Explanation"):
+        st.write(
+            'Cama_mesa_banho(beth_bath_table) merupakan produk paling banyak dibeli oleh customer. '
+            'Hal ini menunjukkan bahwa perlengkapan kebutuhan rumah tangga seperti memiliki penjualan yang tinggi di pasar.')
 
 # Plot Bar 2 (Bottom)
 with col2:
@@ -128,6 +125,16 @@ with col2:
     ax.set_ylabel("Product Category", fontsize=10)
     wrap_labels(ax, width=15) 
     st.pyplot(fig)
+    with st.expander("See Explanation"):
+        st.write(
+            'seguros_e_servicos(security and services) merupakan produk paling sedikit dibeli oleh customer. '
+            'Penyebabnya adalah kemungkinan kategori produk ini tidak terlalu penting bagi pelanggan dan tidak perlu dibeli melalui e-commerce.')
+        
+with st.expander("See Explanation"):
+        st.write(
+            'Strategi pemasaran untuk mendongkrak pasar penjualan seguros_e_servicos(security and services). '
+            'Kedepannya yaitu mengedukasi para pelanggan pentingnya privacy and security di lingkungan rumah dan keluarga agar selalu aman.')
+
 
 
 # Distribution of Most Customer Payment Methods Visualization #
@@ -156,6 +163,11 @@ for i, v in enumerate(payment_counts["percentage"]):
     ax.text(i, v + 0.01, f'{v*100:.1f}%', ha='center', fontsize=12)
 st.pyplot(fig)
 
+with st.expander("See Explanation"):
+        st.write(
+            'Method payment yang sering dipakai oleh customer yaitu Credit card yang tembus hingga 73%  dari semua customer '
+            'Hal ini menunjukkan bahwa pelanggan lebih praktis menggunakan metode pembayaran ini karena tidak perlu ke minimarket atau agen marketplace untuk membayar dengan uang cash atau menukarnya dengan voucher.')
+
 
 # Top Number Transaction per State Visualization # 
 # Memanggil fungsi untuk mendapatkan data transaksi per negara bagian
@@ -182,6 +194,11 @@ ax.set_ylabel("Total Orders", fontsize=12)
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
+with st.expander("See Explanation"):
+        st.write(
+            'Sao Paulo(SP) paling banyak atas menduduki transaksi paling banyak dibanding ibu kota yang lainnya karena termasuk pusat ekonomi di Brazil dibandingkan negara bagian lainnya. '
+            'Sao Paulo memiliki populasi penduduk yang tinggi serta keberadaan logistik beserta infrastrukturnya yang merata. Hal ini banyak seller yang mendirikan lokasi usahanya di Sao Paulo.')
+
 
 # RFM Visualization #
 # Meload data & hitung RFM
@@ -206,6 +223,9 @@ with tab1:
                 palette='Blues', legend=False, ax=ax)
     ax.set_title('Top 5 Customers by Recency')
     st.pyplot(fig)
+    with st.expander("See Explanation"):
+        st.write(
+            'Terdapat 5 pelanggan teratas yang menunjukkan baru belanja beberapa hari terakhir. ini menunjukkan E-Commerce masih berjalan dengan baik.')
 
 # Plot bar untuk Frequency
 with tab2:
@@ -216,6 +236,9 @@ with tab2:
                 palette='Greens', legend=False, ax=ax)
     ax.set_title('Top 5 Customers by Frequency')
     st.pyplot(fig)
+    with st.expander("See Explanation"):
+        st.write(
+            'Terdapat 5 pelanggan teratas yang memiliki jumlah order tertinggi. ini menunjukkan bahwa mereka selalu mengandalkan E-commerce untuk membeli kebutuhan rumah dan lainnya.')
 
 # Plot bar untuk Monetary
 with tab3:
@@ -227,3 +250,6 @@ with tab3:
     ax.set_title('Top 5 Customers by Monetary Value')
     ax.set_xscale("log")
     st.pyplot(fig)
+    with st.expander("See Explanation"):
+        st.write(
+            'Terdapat 5 pelanggan teratas yang mengeluarkan uang belanja yang tinggi. Ini menunjukkan mereka sering melakukan pembelian dengan nilai order yang besar.')
